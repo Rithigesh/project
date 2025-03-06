@@ -26,7 +26,10 @@ CREATE TABLE transactions (
   amount numeric NOT NULL CHECK (amount > 0),
   description text NOT NULL,
   category text,
-  date date NOT NULL,
+  withdrawal DECIMAL(10,2),
+  deposit DECIMAL(10,2),
+  balance DECIMAL(10,2) NOT NULL,
+  transaction_date DATE NOT NULL DEFAULT CURRENT_DATE,
   created_at timestamptz DEFAULT now()
 );
 
