@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-indigo-50 to-purple-50 min-h-screen;
+  }
+}
+
+.glass-card {
+  @apply bg-white bg-opacity-60 backdrop-blur-lg border border-white border-opacity-20 shadow-xl;
+}
+
+.transaction-item {
+  @apply transition-all duration-200 hover:bg-gray-50;
+}
+
+.chart-container {
+  @apply transition-all duration-300 transform hover:scale-[1.02];
+}
